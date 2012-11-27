@@ -1,0 +1,7 @@
+[05-11-2012] [1.0][ Gerome ]
+	- first Release.
+[05-25-2012] [1.1][ Gerome ]
+	- Rewriting some codes.
+[11-19-2012] [1.2][ Gerome ]
+	- Rewriting some messy codes.
+	- Fix Sidebar Link problem in CLicking
