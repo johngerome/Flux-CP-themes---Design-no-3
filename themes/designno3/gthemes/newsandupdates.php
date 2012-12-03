@@ -43,7 +43,7 @@ $news = $sth->fetchAll();
 				<small class="date"><?php echo htmlspecialchars(Flux::message('ModifiedLabel')) ?> : <?php echo $nrow->modified ?></small>
 			<?php endif; ?>
 			<?php if($nrow->link): ?>
-				<a class="news_link" href="<?php echo $nrow->link ?>"><small><?php echo htmlspecialchars(Flux::message('NewsLink')) ?></small></a>
+				<a class="news_link" href="<?php echo htmlspecialchars($nrow->link) ?>"><small><?php echo htmlspecialchars(Flux::message('NewsLink')) ?></small></a>
 			<?php endif; ?>
 
 		</li>

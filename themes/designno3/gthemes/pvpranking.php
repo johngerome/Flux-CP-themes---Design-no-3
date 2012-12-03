@@ -51,4 +51,4 @@ endforeach;
         </tr>
 <?php endfor; ?>
 </table>
-<a href="<?php echo $this->url('ranking','pvpranking'); ?>" id="seemore">See More..</a> 
+<a href="<?php echo htmlspecialchars($this->url('ranking','pvpranking')); ?>" id="seemore">See More..</a> 

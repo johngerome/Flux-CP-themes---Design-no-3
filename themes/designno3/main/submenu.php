@@ -14,7 +14,7 @@ $menuItems = $this->getMenuItems();
 	<?php foreach ($adminMenuItems as $menuItem): ?>
 	<tr>
 		<td class="menuitem">
-			<a href="<?php echo $this->url($menuItem['module'], $menuItem['action']) ?>"<?php
+			<a href="<?php echo htmlspecialchars($this->url($menuItem['module'], $menuItem['action'])) ?>"<?php
 				if ($menuItem['module'] == 'account' && $menuItem['action'] == 'logout')
 					echo ' onclick="return confirm(\'Are you sure you want to logout?\')"' ?>>
 				<span><?php echo htmlspecialchars($menuItem['name']) ?></span>

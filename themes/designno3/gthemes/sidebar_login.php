@@ -11,7 +11,7 @@
 
 <div style='display:none'>
 <div id='inline_content' style="padding:10px; ">
-<form action="<?php echo $this->url('account', 'login', array('return_url' => $params->get('return_url'))) ?>" method="post">
+<form action="<?php echo htmlspecialchars($this->url('account', 'login', array('return_url' => $params->get('return_url')))) ?>" method="post">
 	<?php if (count($serverNames) === 1): ?>
 	<input type="hidden" name="server" value="<?php echo htmlspecialchars($session->loginAthenaGroup->serverName) ?>" />
 	<?php endif ?>
@@ -58,8 +58,8 @@
 
 	<ul id="button" >
     <li><input type="submit" id="submit" value="log In" /></li>
-    <a href="<?php echo $this->url('account','resetpass')?>" style="color: #ac1717; "> forgot password ?</a>&nbsp;<br />
-	Don't have an Account ? <a href="<?php echo $this->url('account','create')?>" style="color: #ac1717; ">Register Here!</a>
+    <a href="<?php echo htmlspecialchars($this->url('account','resetpass')) ?>" style="color: #ac1717; "> forgot password ?</a>&nbsp;<br />
+	Don't have an Account ? <a href="<?php echo htmlspecialchars($this->url('account','create')) ?>" style="color: #ac1717; ">Register Here!</a>
     </ul>
 </form>
 </div>
@@ -67,7 +67,7 @@
 <?php else: ?>
 <div style='display:none'>
     <div id="inline_content" style='padding:10px; background:#fff;'>
-        You are currently logged in as <strong><a href="<?php echo $this->url('account', 'view') ?>" title="View account"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
+        You are currently logged in as <strong><a href="<?php echo htmlspecialchars($this->url('account', 'view')) ?>" title="View account"><?php echo htmlspecialchars($session->account->userid) ?></a></strong>
     </div>
 </div>
 <?php endif ?>

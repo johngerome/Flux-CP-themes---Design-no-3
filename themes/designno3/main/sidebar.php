@@ -12,7 +12,7 @@ $menuItems = $this->getMenuItems();
         	<?php foreach ($menus as $menuItem):  ?>
         	
         		<li>
-        			<a href="<?php echo $menuItem['url'] ?>"<?php
+        			<a href="<?php echo htmlspecialchars($menuItem['url']) ?>"<?php
         				if ($menuItem['module'] == 'account' && $menuItem['action'] == 'logout')
         					echo ' onclick="return confirm(\'Are you sure you want to logout?\')"' ?>>
         				<?php echo htmlspecialchars($menuItem['name']) ?>
